@@ -13,10 +13,20 @@ BODY {
   text-align: center;
   position: fixed;
   width: 100%;
-  background-color: #000;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px) saturate(100%) contrast(100%) brightness(100%);
   padding-top: 2px;
   z-index: 1000;
   vertical-align: middle;
+}
+.top_one {
+  padding-left: 20px;
+  text-align: left;
+}
+.top_two {
+  padding-right: 20px;
+  text-align: right;
 }
 .back-obj {
   width: 100%;
@@ -35,9 +45,29 @@ BODY {
 .main_cont_1 {
   padding-top: 45px;
   width: 100%;
-  height: 500px;
+  height: 450px;
   background-image: url("img/backgr1.svg");
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main_cont_2 {
+  padding-top: 45px;
+  width: 100%;
+  height: 450px;
+  background-image: url("img/conc.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main_alb_first img{
+  transition: transform 0.5s ease;
+  cursor: zoom-in;
+}
+.main_alb_first img:active {
+  -webkit-transform: scale(1.33);
+  transform: scale(1.33);
+  cursor: zoom-out;
 }
 .main_alb {
   margin: 10px 10px 10px 10px;
@@ -55,6 +85,15 @@ BODY {
   margin: 10px 10px 10px 10px;
   display: inline-block;
   max-width: 115px;
+}
+.div_is_imgs img {
+  transition: transform 0.5s ease-in-out;
+  cursor: zoom-in;
+}
+.div_is_imgs img:active {
+  -webkit-transform: scale(1.33);
+  transform: scale(1.33);
+  cursor: zoom-out;
 }
 .imgfromdiv {
   max-width: 110px;
@@ -121,6 +160,9 @@ BODY {
 .cutter_main {
   padding-top: 35px;
 }
+.cutter_mus {
+  padding-top: 340px;
+}
 .cellar_url {
   font-family: 'Unbounded', cursive;
   font-optical-sizing: auto;
@@ -129,9 +171,10 @@ BODY {
   font-size: 15px;
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
 .cellar_url:hover{
+  color: pink;
   opacity: 0.5;
   text-decoration: underline;
 }
@@ -156,9 +199,28 @@ BODY {
   text-align: center;
   margin: 2px 2px 2px 2px;
 }
+.burger_2x {
+  margin-left: 15px;
+  height: 10px;
+  position: inherit;
+  text-align: center;
+}
+.menu-option-exit{
+  text-align: left;
+  opacity: 1;
+  font-size: 15px;
+  color: #fff;
+  opacity: 0.7;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  text-decoration: none;
+  margin-left: 35px;
+}
 .menu-list {
   position: fixed;
-  background-color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px) saturate(100%) contrast(100%) brightness(100%);
   z-index: 2000;
   width: 100%;
   height: 100%;
@@ -180,9 +242,9 @@ BODY {
   text-align: left;
   opacity: 1;
   font-size: 18px;
-  color: #000000;
-  font-family: 'Unbounded', cursive;
-  font-weight: 600;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-weight: bolder;
   text-decoration: none;
   margin-left: 35px;
 }
@@ -220,9 +282,16 @@ BODY {
 .dash-mortgage {
   padding: 2px 0px 2px 0px;
 }
+.cellar_imgs {
+  transition: transform 0.3s;
+}
+.cellar_imgs:hover{
+  transform: scale(0.8);
+  opacity: 0.5;
+}
 .menu-dash {
   height: 0.7px;
-  background-color: #000000;
+  background-color: #fff;
   opacity: 0.2;
   padding: 0;
   margin: 13px 25px 13px 25px;
@@ -276,7 +345,7 @@ BODY {
   font-style: normal;
   font-size: 14px;
   color: #fff;
-  transition: 0.9s;
+  transition: 0.7s;
 
 }
 .button:hover{
